@@ -11,6 +11,17 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+/*Route::get('/', function () {
+    $people = ['Vaughan', 'Slater'];
+
+    return view('welcome')->with('people', $people);
+});*/
+
+Route::get('about', function() {
+    return view('pages.about');
 });
+
+Route::get('/', 'PagesController@home');
+
+Route::get('/cards', 'CardsController@index');
+Route::get('/cards/{card}', 'CardsController@show');

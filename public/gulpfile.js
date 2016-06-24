@@ -11,8 +11,7 @@ var elixir = require('laravel-elixir');
  |
  */
 
-elixir.config.sourcemaps = false;
-
 elixir(function(mix) {
-    mix.sass('app.scss');
+    mix.sass('app.scss')
+        .version('css/app.css');
 });
